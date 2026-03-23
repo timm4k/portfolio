@@ -1,0 +1,87 @@
+.aboutContent {
+  max-width: 850px;
+  margin: 48px auto 64px;
+  text-align: center;
+}
+
+.aboutContent p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: rgba(244, 234, 255, 0.7);
+  margin-bottom: 24px;
+}
+
+.statsGrid {
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.statCard {
+  position: relative;
+  padding: 40px;
+  border-radius: 18px;
+  background: rgba(26, 8, 48, 0.28);
+  border: 1px solid rgba(210, 170, 255, 0.14);
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.38);
+  min-width: 280px;
+  text-align: center;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(210, 170, 255, 0.28);
+}
+
+.statCardGlow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(168, 85, 247, 0.15),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.statNumber {
+  display: block;
+  font-size: clamp(48px, 6vw, 64px);
+  font-weight: 800;
+  background: linear-gradient(to bottom, #fff, rgba(210, 170, 255, 0.8));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.statLabel {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(210, 170, 255, 0.5);
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .statsGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutContent {
+    text-align: left;
+    padding: 0 10px;
+  }
+
+  .statCard {
+    width: 100%;
+  }
+}
